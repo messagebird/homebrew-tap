@@ -5,21 +5,21 @@
 class Bird < Formula
   desc "Operate the Bird platform from a shell, script, or AI agent"
   homepage "https://bird.com/cli"
-  version "0.8.10"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cli.platform.bird.com/releases/v0.8.10/bird-darwin-amd64.tar.gz"
-      sha256 "56e849992feed2b3ca613ae6fd160bee83d3942ac916b30674b517aa6a3ac978"
+      url "https://cli.platform.bird.com/releases/v0.9.0/bird-darwin-amd64.tar.gz"
+      sha256 "2cb5c7981e09908ec5ffbffc2daa4f8c1c1faead417b740bb674f216c042a504"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cli.platform.bird.com/releases/v0.8.10/bird-darwin-arm64.tar.gz"
-      sha256 "e51864e000c83e846fe12f87cd2e0544cc1cfa3f7d776b79006f5a992d0ebad1"
+      url "https://cli.platform.bird.com/releases/v0.9.0/bird-darwin-arm64.tar.gz"
+      sha256 "1248c7dbfc6ff094ad4f1a57ba628b5f09fcbd579669cae2bc82e26db6fedfb0"
 
       define_method(:install) do
         bin.install "bird"
@@ -29,16 +29,16 @@ class Bird < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.8.10/bird-linux-amd64.tar.gz"
-      sha256 "4c71b415b1bde58d928952c539c5eb8248696a280c5210ce8c8994d931428bd6"
+      url "https://cli.platform.bird.com/releases/v0.9.0/bird-linux-amd64.tar.gz"
+      sha256 "5ed2abb0c70a2d4644fd914519d274c443f4b4e382be24cfa20912d15b99dc01"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.8.10/bird-linux-arm64.tar.gz"
-      sha256 "e79b28d3aba043593e239d9200dcea0fd6116ae0f3fabbbcee3f0c2587204121"
+      url "https://cli.platform.bird.com/releases/v0.9.0/bird-linux-arm64.tar.gz"
+      sha256 "5e55695be584c92cac1e868e72f5a4e48f5cf75ce9fe00ab8d6fc9cc706d3125"
 
       define_method(:install) do
         bin.install "bird"
