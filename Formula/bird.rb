@@ -5,21 +5,21 @@
 class Bird < Formula
   desc "Operate the Bird platform from a shell, script, or AI agent"
   homepage "https://bird.com/cli"
-  version "0.9.6"
+  version "0.9.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cli.platform.bird.com/releases/v0.9.6/bird-darwin-amd64.tar.gz"
-      sha256 "2daf74e1dca1ebc04a171b904186fdf45a7f5dcab933ae698ea518d83817e0fa"
+      url "https://cli.platform.bird.com/releases/v0.9.7/bird-darwin-amd64.tar.gz"
+      sha256 "3c36f4c39be4fce4b8c893cf359515e1dbe6af4e183834eee185a62774956827"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cli.platform.bird.com/releases/v0.9.6/bird-darwin-arm64.tar.gz"
-      sha256 "fe8dbfd3275e3a309a86a5e6eebf128c6eff8922ad4180d5dfc7e606456a7b60"
+      url "https://cli.platform.bird.com/releases/v0.9.7/bird-darwin-arm64.tar.gz"
+      sha256 "440a140c9f904a288973be1c02b717cd755dc735dcc50fb77d93faa0ddc69729"
 
       define_method(:install) do
         bin.install "bird"
@@ -29,16 +29,16 @@ class Bird < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.9.6/bird-linux-amd64.tar.gz"
-      sha256 "43310d9c498342f4438671642878d91e3a5497a071e1c1a28c7490b5bb39ae8b"
+      url "https://cli.platform.bird.com/releases/v0.9.7/bird-linux-amd64.tar.gz"
+      sha256 "6ad2847a5fb993c182ca5e449086e0e4487ea53d1d097f8f7be07b2dd124204e"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.9.6/bird-linux-arm64.tar.gz"
-      sha256 "ead1e21e97c58b5ede0a5600b964a175521c3589f89a3d8383f872b21fe2b683"
+      url "https://cli.platform.bird.com/releases/v0.9.7/bird-linux-arm64.tar.gz"
+      sha256 "6ddda0586a77f92813aa4dc004fa4d9fe429cb2f9020175fbed6cebb140fabb7"
 
       define_method(:install) do
         bin.install "bird"
