@@ -5,21 +5,21 @@
 class Bird < Formula
   desc "Operate the Bird platform from a shell, script, or AI agent"
   homepage "https://bird.com/cli"
-  version "0.11.5"
+  version "0.11.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cli.platform.bird.com/releases/v0.11.5/bird-darwin-amd64.tar.gz"
-      sha256 "1765e28f411723c21f85a9f683a5403dff378c012b7f9db38c8de646009d006b"
+      url "https://cli.platform.bird.com/releases/v0.11.6/bird-darwin-amd64.tar.gz"
+      sha256 "d8c67c6436d1e769f6044631a7a78275e380e4ccf257df10c86f76191e01ece7"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cli.platform.bird.com/releases/v0.11.5/bird-darwin-arm64.tar.gz"
-      sha256 "e7798782afbd0ba7f7f5170e4bc25934760757e8ec22fa97de6f3b17dd62eee1"
+      url "https://cli.platform.bird.com/releases/v0.11.6/bird-darwin-arm64.tar.gz"
+      sha256 "c0345c105f491ed1a02c9674742ec17a1a4ae87358554687d8a877b39158b6a4"
 
       define_method(:install) do
         bin.install "bird"
@@ -29,16 +29,16 @@ class Bird < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.11.5/bird-linux-amd64.tar.gz"
-      sha256 "58fcea6470ee301d8c02310139dcfbb3d290fa79cd68dbe9c1ecc0e2135df5d5"
+      url "https://cli.platform.bird.com/releases/v0.11.6/bird-linux-amd64.tar.gz"
+      sha256 "3819897df2ad8b58e55264ebca0d8df7fe33bf0b73b4ab530d20b71a6be8495e"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cli.platform.bird.com/releases/v0.11.5/bird-linux-arm64.tar.gz"
-      sha256 "ddfe1ca986f23d484671e71eb0a2ab2fc2a598a0943a1c56fb9dd07f37a3a1d7"
+      url "https://cli.platform.bird.com/releases/v0.11.6/bird-linux-arm64.tar.gz"
+      sha256 "69f5fb9ab60da98763618926367b3dc7795053865e4ff10c745034d7e2ff91e8"
 
       define_method(:install) do
         bin.install "bird"
