@@ -5,21 +5,21 @@
 class Bird < Formula
   desc "Operate the Bird platform from a shell, script, or AI agent"
   homepage "https://bird.com/cli"
-  version "0.138.0"
+  version "0.138.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cli.bird.com/releases/v0.138.0/bird-darwin-amd64.tar.gz"
-      sha256 "613c9010d52179d0ae6d43b37f77f62a4e4298726eff8acb9f7560c2f9081c02"
+      url "https://cli.bird.com/releases/v0.138.1/bird-darwin-amd64.tar.gz"
+      sha256 "cf79e6bff33b1b3e7442cb07750f90ebee6672d8490f8249482277f81234d87d"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cli.bird.com/releases/v0.138.0/bird-darwin-arm64.tar.gz"
-      sha256 "3d9c696d350f7fd568a9a0da47447585f1aa7f44e61618f2bb8ce00689205874"
+      url "https://cli.bird.com/releases/v0.138.1/bird-darwin-arm64.tar.gz"
+      sha256 "e022f866ee32311f1bb56a5a04215791f61e6d282102993bb271864c1749f36a"
 
       define_method(:install) do
         bin.install "bird"
@@ -29,16 +29,16 @@ class Bird < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cli.bird.com/releases/v0.138.0/bird-linux-amd64.tar.gz"
-      sha256 "6446ec94b01d8216e6c0135ea4926db17352c21d999b944558bc8c995e6fc06d"
+      url "https://cli.bird.com/releases/v0.138.1/bird-linux-amd64.tar.gz"
+      sha256 "86bf08ecfcd24dacb6e5e61541eca5f06a28ee61b6e029ddc043776fe2295186"
 
       define_method(:install) do
         bin.install "bird"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cli.bird.com/releases/v0.138.0/bird-linux-arm64.tar.gz"
-      sha256 "132bd3239e97f5fab3b7bf2e32a8dd4dbc0031bbe1aabe9cb76e1f4c0ffe4baf"
+      url "https://cli.bird.com/releases/v0.138.1/bird-linux-arm64.tar.gz"
+      sha256 "a20a44f4b07446f709866da39d128bda2608b8a80c1ba34b46dc737a0d3069ec"
 
       define_method(:install) do
         bin.install "bird"
